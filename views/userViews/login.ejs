@@ -1,0 +1,39 @@
+  <%- include ("../partials/header.ejs") %>
+
+  <body>
+      <div class="interface">
+            <header>
+                <div>
+                    <h2>Login de Usuário</h2>
+                    <p>Por favor, entre com o seu usuário!<p>
+
+
+                      <% if(error_msg.length > 0) {%>
+                              <div class="alert alert-danger">
+                                <%= error_msg %>
+                              </div>
+                      <% } %>
+
+
+                </div>
+
+            </header>
+            <body>
+                <div class="container-login">
+                    <form class="form-login" action="/authenticate" method="post">
+
+                          <label for="email">E-mail</label>
+                          <input type="email" name="email" id="email" placeholder="Digite o email" required/>
+
+                          <label for="password">Senha</label>
+                          <input type="password" name="password" id="password" placeholder="Digite a senha" required/>
+
+                         <button>Login</button>
+                         <a href="/register" class="link-register" >Fazer cadastro</a>
+                    </form>
+                </div>
+            </body>
+      </div>
+  </body>
+
+<%- include ("../partials/footer.ejs") %>

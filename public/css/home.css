@@ -1,0 +1,85 @@
+.interface-home{
+  height: 100%;
+  width: 100%;
+}
+
+.home-section1{
+  width: 100%;
+  height: 50%;
+  background:#00FA9A;
+  color:  #363636;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#logged-in-user{
+  color: #363636;
+  background:#00FA9A;
+  align-self: end;
+  list-style: none;
+}
+#logged-in-user label{
+  font-weight: 700;
+  margin-left:10px;
+}
+#logged-in-user span{
+  margin-left: 5px;
+}
+
+.home-section2{
+  width: 100%;
+  height: 50%;
+  background:#363636;
+}
+
+.home-section2 header{
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-section2 header a{
+  text-decoration: none;
+  color:  #363636;
+  font-size: 15px;
+  padding: 5px;
+  border:none;
+  background: #00FA9A	;
+  border-radius: 4px;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+}
+.home-section2 header a:hover{
+  transform: scale(1.1);
+}
+.home-section2 header a + a{
+  margin-left: 20px;
+  text-decoration: none;
+
+}
+#home-section2-container{
+  width: 100%;
+  height: 60%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #fff;
+}
+#home-section2-container li{
+  list-style: none;
+  margin-left: 20px;
+  line-height: 30px;
+
+}
+#home-section2-container li label{
+  margin-right: 10px;
+  font-weight: 700;
+}
+#home-section2-container li span{
+  color: #DCDCDC;
+}

@@ -1,0 +1,53 @@
+
+<%- include ("../partials/header.ejs") %>
+
+      <body>
+
+          <input type="checkbox" id="chec">
+          <label for="chec" class="menu-icon">
+              <span><i class="fas fa-bars"></i></span>
+          </label>
+              <nav class="nav-menu">
+                <ul>
+                  <li><a href="/profilesettings">MEU PERFIL</a></li>
+                  <li><a href="/home">HOME</a></li>
+                  <li><a href="/">LOGIN</a></li>
+                  <li><a href="/register">CADASTRO</a></li>
+                  <li><a href="#">VALIDAR EMAIL</a></li>
+                </ul>
+              </nav>
+              <div class="interface-home">
+                  <section class="home-section1">
+                         <h1>Meu perfil</h1>
+                         <h3>Desafio Capyba</h3>
+
+                  </section>
+                         <div id="logged-in-user"><label>Usuário Logado: </label><span>Fernando</span></div>
+                  <section class="home-section2">
+                    <form action="/saveDocuments" method="post">
+                        <header>
+                            <button class="register-doc-button">Confirmar</button>
+                        </header>
+                        <div id="register-documents-container">
+                            <label>CPF:</label>
+                            <input type="text" name="cpf" placeholder="..." required/>
+
+                            <label>RG:</label>
+                            <input type="text" name="rg" placeholder="..." required/>
+
+                            <label>Titulo:</label>
+                            <input type="text" name="title" placeholder="..." required/>
+
+                            <label>CTPS:</label>
+                            <input type="text" name="ctps" placeholder="..." required/>
+
+                            <label>Telefone:</label>
+                            <input type="text" type="phone" placeholder="..." required/>
+                        </div>
+                      </form>
+                  </section>
+
+              </div>
+      </body>
+
+<%- include ("../partials/footer.ejs") %>

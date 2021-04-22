@@ -1,0 +1,63 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+
+
+
+body{
+  font-family:arial;
+}
+
+
+input[type="checkbox"]
+{
+  display: none;
+}
+
+.nav-menu
+{
+  background-color: rgba(16,16,16,.5);
+  width: 250px;
+  height: 100vh;
+  left: -250px;
+  position: absolute;
+  transition: all .5s;
+}
+
+input[type="checkbox"]:checked ~ .nav-menu
+{
+  transform: translateX(250px);
+}
+input[type="checkbox"]:checked ~ .menu-icon
+{
+  color: #fff;
+}
+
+.nav-menu ul{
+  padding: 0;
+  top: 60px;
+  position: absolute;
+  width: 100%;
+}
+.nav-menu ul li{
+  list-style: none;
+  padding:20px 10px;
+}
+.nav-menu ul li a{
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+.nav-menu ul li:hover{
+  background-color:  #00FA9A	;
+}
+
+.menu-icon {
+  font-size: 30px;
+  padding:15px;
+  z-index: 1;
+  position: absolute;
+}

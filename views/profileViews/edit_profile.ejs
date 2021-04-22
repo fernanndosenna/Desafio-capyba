@@ -1,0 +1,49 @@
+
+<%- include ("../partials/header.ejs") %>
+
+
+    <body>
+        <div class="interface-profile">
+            <header>
+                  <div>Foto do usuário</div>
+            </header>
+            <div id="hrprofilesettings">
+              <hr >
+            </div>
+            <body>
+              <div class="profile-datas-container">
+                    <div class="profile-div1">
+                      <form action="/updateprofile" method="post">
+                        <input type="hidden" name="id" value="<%= user.id %>"/>
+                        <span>
+                              <label>Nome</label>
+                              <li><input class="input-edit-profile" type="text" name="name" value="<%= user.name %>"/></li>
+                        </span>
+
+                        <span>
+
+                            <label>E-mail</label>
+                            <li><input class="input-edit-profile" type="text" name="email" value="<%= user.email %>"/></li>
+                        </span>
+
+                    </div>
+                    <div class="profile-div2">
+                          <button>Atualizar</button>
+                    </div>
+                    <div class="back">
+                         <a href="/profilesettings"><i class="fas fa-arrow-left"></i><a>
+                    </div>
+                </div>
+                      </form>
+            </body>
+        </div>
+    </body>
+
+<%- include ("../partials/footer.ejs") %>
+
+<!--
+nome
+email
+senha
+foto
+-->

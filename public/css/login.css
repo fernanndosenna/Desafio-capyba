@@ -1,0 +1,76 @@
+body{
+  height: 100vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+header{
+  width: 100%;
+}
+header div{
+  padding:20px 30px;
+}
+header div h2{
+  color:#1C1C1C;
+}
+header div p{
+  color: #696969;
+}
+.form-login{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.form-login input{
+  width: 100%;
+  padding:5px;
+  border-radius: 4px;
+  border:1px solid #DCDCDC	;
+}
+.form-login label{
+  padding-top: 10px;
+  color: #696969;
+  padding-bottom: 5px;
+}
+.container-login{
+  padding:0px 30px;
+}
+
+.form-login button, .link-register{
+  margin-top:10px;
+  padding: 10px;
+  border:none;
+  background: #00FA9A	;
+  border-radius: 4px;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+  color:#363636;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none
+}
+.form-login button:hover, .link-register:hover{
+  transform: scale(1.1);
+  color: #fff;
+}
+.back{
+  text-align: center;
+  padding:30px 0;
+  color: #00FA9A;
+}
+.back a{
+  font-size: 30px;
+  color: #00FA9A;
+  animation: arrow 1s infinite;
+}
+.back a:hover{
+  color:#363636;
+}
+@keyframes arrow {
+    0%{text-shadow: 1px 1px 3px #fff}
+    25%{text-shadow: 1px 1px 3px #F0F8FF}
+    50%{text-shadow: 1px 1px 3px #98FB98}
+    75%{text-shadow: 1px 1px 3px #00FF7F}
+    100%{text-shadow: 1px 1px 3px #00FA9A}
+}

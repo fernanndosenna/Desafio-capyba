@@ -1,0 +1,38 @@
+.register-doc-button{
+  text-decoration: none;
+  color:  #363636;
+  font-size: 15px;
+  padding: 5px;
+  border:none;
+  background: #00FA9A	;
+  border-radius: 4px;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.register-doc-button:hover{
+  transform: scale(1.1);
+}
+#register-documents-container {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  grid-gap: 10px;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color:#fff;
+}
+
+ #register-documents-container input{
+  padding: 0px;
+  width: 100px;
+  border-radius: 4px;
+  text-align: center;
+  border:1px solid #DCDCDC;
+  margin:0;
+}

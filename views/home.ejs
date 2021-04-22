@@ -1,0 +1,61 @@
+
+<%- include ("./partials/header.ejs") %>
+
+      <body>
+
+          <input type="checkbox" id="chec">
+          <label for="chec" class="menu-icon">
+              <span><i class="fas fa-bars"></i></span>
+          </label>
+              <nav class="nav-menu">
+                <ul>
+                  <li><a href="/profilesettings">MEU PERFIL</a></li>
+                  <li><a href="/home">HOME</a></li>
+                  <li><a href="/">LOGIN</a></li>
+                  <li><a href="/register">CADASTRO</a></li>
+                  <li><a href="#">VALIDAR EMAIL</a></li>
+                </ul>
+              </nav>
+              <div class="interface-home">
+                  <section class="home-section1">
+                         <h1>Meu perfil</h1>
+                         <h3>Desafio Capyba</h3>
+
+                  </section>
+
+                         <div id="logged-in-user"><label>Usuário Logado: </label><span><%= user.name %></span></div>
+                  <section class="home-section2">
+                    <% documents.forEach( documents => { %>
+                      <header>
+                          <a href="/registerDocuments">Inserir Dados</a>
+                          <a href="/editDocuments/<%= documents.id%>">Editar Dados</a>
+
+                      </header>
+                      <div id="home-section2-container">
+                          <li><label>CPF:</label><span><%= documents.cpf %></span> </li>
+                          <li><label>RG:</label><span><%= documents.rg %></span> </li>
+                          <li><label>Titulo:</label> <span><%= documents.title %></span></li>
+                          <li><label>CTPS:</label> <span><%= documents.ctps %></span></li>
+                          <li><label>Telefone:</label> <span><%= documents.phone %></span></li>
+                      </div>
+                      <% }) %>
+                      <% if(documents.length == 0){ %>
+                        <header>
+                            <a href="/registerDocuments">Inserir Dados</a>
+                            <a href="/home">Editar Dados</a>
+
+                        </header>
+                      <div id="home-section2-container">
+                          <li><label>CPF:</label><span>xxx</span> </li>
+                          <li><label>RG:</label><span>xxx</span> </li>
+                          <li><label>Titulo:</label> <span>xxx</span></li>
+                          <li><label>CTPS:</label> <span>xxx</span></li>
+                          <li><label>Telefone:</label> <span>xxx</span></li>
+                      </div>
+                      <% } %>
+                  </section>
+
+              </div>
+      </body>
+
+<%- include ("./partials/footer.ejs") %>

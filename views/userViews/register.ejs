@@ -1,0 +1,41 @@
+<%- include ("../partials/header.ejs") %>
+
+<body>
+    <div class="interface">
+          <header>
+              <div>
+                  <h2>Cadastro de Usuário</h2>
+                  <p>Faça já o seu cadastro!<p>
+              
+              </div>
+          </header>
+          <body>
+              <div class="container-login">
+                  <form action="/register/save" method="post" class="form-login" enctype="multipart/form-data">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" id="email" placeholder="Digite o email" required/>
+
+                        <label for="name">Nome</label>
+                        <input type="text" name="name" id="name" placeholder="Digite nome" required/>
+
+                        <label for="password">Senha</label>
+                        <input type="password" name="password" id="password" placeholder="Digite a senha" required/>
+
+                        <label for="password">Confirme senha</label>
+                        <input type="password" name="password2"  id="password" placeholder="Confirme a senha" required/>
+
+                        <label for="selfie">Tire uma selfie</label>
+                        <input type="file" name="file" id="selfie" accept="image/*" capture="camera" required>
+
+
+                       <button class="link-register">Cadastrar</button>
+                       <div class="back">
+                            <a href="/"><i class="fas fa-arrow-left"></i><a>
+                       </div>
+                  </form>
+              </div>
+          </body>
+    </div>
+</body>
+
+<%- include ("../partials/footer.ejs") %>

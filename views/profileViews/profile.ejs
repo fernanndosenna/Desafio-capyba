@@ -1,0 +1,54 @@
+
+<%- include ("../partials/header.ejs") %>
+
+
+    <body>
+        <div class="interface-profile">
+            <header>
+                    <div class="personal-image">
+      
+                        <figure class="personal-figure">
+                      
+                          <label class="label">
+                                  <input type="file" />
+                  
+                                    <figure class="personal-figure">
+                                    
+                                          <img src="https://avatars1.githubusercontent.com/u/11435231?s=460&v=4" class="personal-avatar" alt="avatar">
+                                          <figcaption class="personal-figcaption">
+                                            <img src="https://raw.githubusercontent.com/ThiagoLuizNunes/angular-boilerplate/master/src/assets/imgs/camera-white.png">
+                                    
+                                          </figcaption>
+                                     </figure>
+                                                 
+                           </label>
+                    </div>
+            </header>
+            <div id="hrprofilesettings">
+              <hr >
+            </div>
+            <body>
+              <div class="profile-datas-container">
+                    <div class="profile-div1">
+                        <span>
+                              <label>Nome</label>
+                              <li><%= user.name %></li>
+                        </span>
+
+                        <span>
+                            <label>E-mail</label>
+                            <li><%= user.email %></li>
+                        </span>
+                    </div>
+                    <div class="profile-div2">
+                          <a href="/editprofile/<%= user.id %>">Editar Informações</a>
+                    </div>
+                    <div class="back">
+                         <a href="/home"><i class="fas fa-arrow-left"></i><a>
+                    </div>
+                </div>
+            </body>
+        </div>
+    </body>
+
+<%- include ("../partials/footer.ejs") %>
